@@ -148,8 +148,11 @@ nashmatchname(char *name)
 
 Shell nashshell = {
 	"nash",
-	"'= \t",
-	0, /* nash doesn't have IFS */
+	"\"= \t",
+
+	/* 	nash doesn't have IFS but otherwise we
+		cannot access lists from mk */
+	' ', 
 	nashcharin,
 	nashexpandquote,
 	nashescapetoken,
