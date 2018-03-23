@@ -10,3 +10,22 @@ use-sh:V:
 		echo $i
 	done
 
+MKSHELL=$HOME/nashroot/bin/nash
+use-nash:V:
+	for i in ("a" "b" "c") {
+		echo $i
+	}
+
+# complex nash syntax
+use-nash2:V:
+	var stdout, stderr, status <= ls /
+	if $status != "0" {
+		echo "error: " $stderr
+		exit(1)
+	}
+	var paths <= split($stdout, "\n")
+	for p in $paths {
+		echo $p
+	}
+
+

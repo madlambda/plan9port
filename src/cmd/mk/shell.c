@@ -1,6 +1,7 @@
 #include "mk.h"
 
 static Shell *shells[] = {
+	&nashshell,
 	&rcshell,
 	&shshell
 };

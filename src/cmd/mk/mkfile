@@ -17,6 +17,7 @@ OFILES=\
 	parse.$O\
 	recipe.$O\
 	rc.$O\
+	nash.$O\
 	rule.$O\
 	run.$O\
 	sh.$O\
