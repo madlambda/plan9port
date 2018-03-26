@@ -78,7 +78,8 @@ sched(void)
 		if(DEBUG(D_EXEC))
 			fprint(1, "recipe='%s'", j->r->recipe);/**/
 		Bflush(&bout);
-		if(j->r->attr&NOMINUSE)
+		if(j->r->attr&NOMINUSE || 
+			strcmp(j->r->shellt->name, "nash")==0)
 			flags = 0;
 		else
 			flags = "-e";
